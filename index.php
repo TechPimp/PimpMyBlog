@@ -1,5 +1,4 @@
 <?php
 
-if (!file_exists('config.yml')) {
-  echo 'initConfig';
-}
+require_once('router.php');
+new Router();
