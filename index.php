@@ -7,7 +7,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
 
-
 // looks inside *this* directory
 $fileLocator = new FileLocator(array(__DIR__."/config"));
 $loader = new YamlFileLoader($fileLocator);

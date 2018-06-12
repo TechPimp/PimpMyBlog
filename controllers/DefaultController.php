@@ -10,7 +10,7 @@ namespace CMS\Controllers;
 
 class DefaultController {
     public function helloAction() {
-        if (!file_exists('credentials.yml')) {
+        if (!file_exists('./config/credentials.yml')) {
             header('Location: /auth');
         } else {
             echo 'Hello World !';
