@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'EB Garamond';
+  src: url("EBGaramond-SemiBold.woff2") format("woff2"), url("EBGaramond-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: 'EB Garamond';
+  src: url("EBGaramond-Italic.woff2") format("woff2"), url("EBGaramond-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'EB Garamond';
+  src: url("EBGaramond-MediumItalic.woff2") format("woff2"), url("EBGaramond-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic; }
+@font-face {
+  font-family: 'EB Garamond';
+  src: url("EBGaramond-ExtraBold.woff2") format("woff2"), url("EBGaramond-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+@font-face {
+  font-family: 'Fjalla One';
+  src: url("FjallaOne-Regular.woff2") format("woff2"), url("FjallaOne-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'EB Garamond';
+  src: url("EBGaramond-ExtraBoldItalic.woff2") format("woff2"), url("EBGaramond-ExtraBoldItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic; }
+@font-face {
+  font-family: 'EB Garamond';
+  src: url("EBGaramond-Bold.woff2") format("woff2"), url("EBGaramond-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'EB Garamond';
+  src: url("EBGaramond-SemiBoldItalic.woff2") format("woff2"), url("EBGaramond-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic; }
+@font-face {
+  font-family: 'EB Garamond';
+  src: url("EBGaramond-BoldItalic.woff2") format("woff2"), url("EBGaramond-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+@font-face {
+  font-family: 'EB Garamond';
+  src: url("EBGaramond-Regular.woff2") format("woff2"), url("EBGaramond-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'EB Garamond';
+  src: url("EBGaramond-Medium.woff2") format("woff2"), url("EBGaramond-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+/*COLORS*/
+/*TYPO*/
+/*RESPONSIVE*/
+* {
+  margin: 0;
+  padding: 0; }
+
+.content-text-inscription {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 4%; }
+  @media (max-width: 1024px) {
+    .content-text-inscription {
+      width: 80%; } }
+  .content-text-inscription .text-inscription {
+    font-family: "FjallaOne-Regular";
+    font-size: 30px; }
+    @media (max-width: 1024px) {
+      .content-text-inscription .text-inscription {
+        font-size: 25px; } }
+    @media (max-width: 767px) {
+      .content-text-inscription .text-inscription {
+        font-size: 20px; } }
+
+.form-inscription {
+  width: 50%;
+  max-width: 610px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1%; }
+  @media (max-width: 1024px) {
+    .form-inscription {
+      width: 70%; } }
+
+.label-inscription {
+  padding: 5px; }
+  .label-inscription .text-form {
+    font-family: "FjallaOne-Regular";
+    font-size: 25px; }
+    @media (max-width: 1024px) {
+      .label-inscription .text-form {
+        font-size: 22px; } }
+    @media (max-width: 767px) {
+      .label-inscription .text-form {
+        font-size: 18px; } }
+  .label-inscription .input-inscription {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    outline: none;
+    font-size: 22px;
+    margin-top: 5px; }
+
+.save-inscription {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 10px 40px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 22px; }
+  @media (max-width: 1024px) {
+    .save-inscription {
+      font-size: 20px; } }
+  @media (max-width: 767px) {
+    .save-inscription {
+      font-size: 18px; } }
+
+/*# sourceMappingURL=style.css.map */
