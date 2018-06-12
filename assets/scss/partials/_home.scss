@@ -1,0 +1,136 @@
+.title-page {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2% 0;
+}
+
+.nav-page {
+  text-align: center;
+  -webkit-box-shadow: 4px 3px 37px -10px rgba(48,48,48,1);
+  -moz-box-shadow: 4px 3px 37px -10px rgba(48,48,48,1);
+  box-shadow: 4px 3px 37px -10px rgba(48,48,48,1);
+
+  .content-link-page {
+    display: block;
+    margin: 0 auto;
+
+    .link-page {
+      display: inline-block;
+      text-transform: uppercase;
+      background: $white;
+      color: $black;
+      padding: 20px 25px;
+
+      &.active {
+        background: $black;
+        color: $white;
+      }
+
+      &:hover {
+        background: $black;
+        color: $white;
+      }
+    }
+  }
+}
+
+.content-articles {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  overflow: hidden;
+  padding-top: 5%;
+
+  @include breakpoint($tablet) {
+    width: 80%;
+  }
+}
+
+.block-left {
+  width: 70%;
+  float: left;
+  box-sizing: border-box;
+  padding-right: 6%;
+
+  @include breakpoint($tablet) {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .title-article {
+    font-size: 35px;
+  }
+
+  .date-article {
+    color: $grey;
+    padding: 10px 0;
+  }
+
+  .line-article {
+    background: $grey;
+    height: 1px;
+    border: none;
+  }
+
+  .text-article {
+    padding: 4% 0;
+
+    @include breakpoint($tablet) {
+      padding: 3% 0;
+    }
+  }
+}
+
+.block-right {
+  width: 30%;
+  float: right;
+  box-sizing: border-box;
+
+  @include breakpoint($tablet) {
+    width: 100%;
+  }
+}
+
+.title-proposition {
+  font-size: 20px;
+  padding-bottom: 10%;
+
+  @include breakpoint($tablet) {
+    padding-bottom: 4%;
+  }
+
+  @include breakpoint($mobile) {
+    padding-top: 4%;
+  }
+}
+
+.article-proposition {
+  background: $black;
+  color: $white;
+  padding: 25px 20px;
+  overflow: hidden;
+  margin-bottom: 15%;
+
+  @include breakpoint($tablet) {
+    margin-bottom: 5%;
+  }
+
+  .title-article-proposition {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+
+  .text-article-proposition {
+    padding-bottom: 20px;
+  }
+
+  .link-article-proposition {
+    display: block;
+    float: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    padding: 5px 25px;
+    border: 1px solid $white;
+  }
+}
