@@ -1,3 +1,7 @@
+auth:
+    path: /auth
+    defaults: { _controller: 'CMS\Controllers\AuthenticationController::setupAuthentication'}
+
 blog_list:
     path:     /
     defaults: { _controller: 'CMS\Controllers\DefaultController::helloAction' }

@@ -8,15 +8,16 @@
 
 namespace CMS\Controllers;
 
-class DefaultController
-{
-    public function helloAction()
-    {
-        echo "Hello world";
+class DefaultController {
+    public function helloAction() {
+        if (!file_exists('credentials.yml')) {
+            header('Location: /auth');
+        } else {
+            echo 'Hello World !';
+        }
     }
 
-    public function getArticleById($id)
-    {
-        echo "id: " . $id;
+    public function getArticleById($id) {
+        echo "articleId: " . $id;
     }
 }
