@@ -1,0 +1,83 @@
+.content-text-inscription {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 4%;
+
+  @include breakpoint($tablet) {
+    width: 80%;
+  }
+
+
+  .text-inscription {
+    font-family: $fjalla_one;
+    font-size: 30px;
+
+    @include breakpoint($tablet) {
+      font-size: 25px;
+    }
+
+    @include breakpoint($mobile) {
+      font-size: 20px;
+    }
+  }
+}
+
+.form-inscription {
+  width: 50%;
+  max-width: 610px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1%;
+
+  @include breakpoint($tablet) {
+    width: 70%;
+  }
+}
+
+.label-inscription {
+  padding: 5px;
+
+  .text-form {
+    font-family: $fjalla_one;
+    font-size: 25px;
+
+    @include breakpoint($tablet) {
+      font-size: 22px;
+    }
+
+    @include breakpoint($mobile) {
+      font-size: 18px;
+    }
+  }
+
+  .input-inscription {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $black;
+    background: transparent;
+    outline: none;
+    font-size: 22px;
+    margin-top: 5px;
+  }
+}
+
+.save-inscription {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 10px 40px;
+  background: $black;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+
+  @include breakpoint($tablet) {
+    font-size: 20px;
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 18px;
+  }
+}
