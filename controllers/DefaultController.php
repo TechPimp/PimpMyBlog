@@ -13,15 +13,20 @@ use PDO;
 
 class DefaultController {
 
+    private $dbh;
+
+    function __construct() {
+        $credential = Yaml::parseFile('config/credentials.yml');
+        $this->dbh = new PDO("mysql:host={$credential['dbhost']};dbname={$credential['dbname']}", $credential["dbuser"], $credential["dbpass"]);
+    }
+
     public function helloAction() {
         if (!file_exists('./config/credentials.yml')) {
             header('Location: /auth');
         } else {
-            $credential = Yaml::parseFile('config/credentials.yml');
-            $dbh = new PDO("mysql:host={$credential['dbhost']};dbname={$credential['dbname']}", $credential["dbuser"], $credential["dbpass"]);
 
             $datas = [];
-            foreach($dbh->query('SELECT title, subtitle from articles') as $row) {
+            foreach($this->dbh->query('SELECT title, subtitle from articles') as $row) {
                 array_push($datas, $row);
             }
             var_dump($datas);
@@ -32,5 +37,9 @@ class DefaultController {
 
     public function getArticleById($id) {
         echo "articleId: " . $id;
+    }
+
+    public function newArticle() {
+        // $this->dbh->query('SELECT title, subtitle from articles');
     }
 }

@@ -9,3 +9,7 @@ blog_list:
 article:
     path:     /articles/{id}
     defaults: { _controller: 'CMS\Controllers\DefaultController::getArticleById' }
+
+new_article:
+    path:     /new_article
+    defaults: { _controller: 'CMS\Controllers\DefaultController::newArticle' }
