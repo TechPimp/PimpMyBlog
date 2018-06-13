@@ -1,2 +1,5 @@
 .git
 config.json
+assets/.sass-cache
+.DS_Store
+.idea
