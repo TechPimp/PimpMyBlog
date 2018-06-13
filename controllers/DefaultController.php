@@ -13,7 +13,7 @@ class DefaultController {
         if (!file_exists('./config/credentials.yml')) {
             header('Location: /auth');
         } else {
-            require_once './views/layout.html.php';
+            render('views/default.html.php');
         }
     }
 
