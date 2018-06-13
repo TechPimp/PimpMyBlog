@@ -129,6 +129,8 @@
   text-transform: uppercase;
   text-align: center;
   padding: 2% 0; }
+  .title-page:focus {
+    outline: none; }
 
 .nav-page {
   text-align: center;
@@ -173,6 +175,8 @@
       padding-right: 0; } }
   .block-left .title-article {
     font-size: 35px; }
+    .block-left .title-article:focus {
+      outline: none; }
   .block-left .date-article {
     color: #aaa;
     padding: 10px 0; }
@@ -182,6 +186,8 @@
     border: none; }
   .block-left .text-article {
     padding: 4% 0; }
+    .block-left .text-article:focus {
+      outline: none; }
     @media (max-width: 1024px) {
       .block-left .text-article {
         padding: 3% 0; } }
@@ -197,6 +203,8 @@
 .title-proposition {
   font-size: 20px;
   padding-bottom: 10%; }
+  .title-proposition:focus {
+    outline: none; }
   @media (max-width: 1024px) {
     .title-proposition {
       padding-bottom: 4%; } }
@@ -210,14 +218,20 @@
   padding: 25px 20px;
   overflow: hidden;
   margin-bottom: 15%; }
+  .article-proposition:focus {
+    outline: none; }
   @media (max-width: 1024px) {
     .article-proposition {
       margin-bottom: 5%; } }
   .article-proposition .title-article-proposition {
     text-transform: uppercase;
     padding-bottom: 10px; }
+    .article-proposition .title-article-proposition:focus {
+      outline: none; }
   .article-proposition .text-article-proposition {
     padding-bottom: 20px; }
+    .article-proposition .text-article-proposition:focus {
+      outline: none; }
   .article-proposition .link-article-proposition {
     display: block;
     float: right;
@@ -226,5 +240,7 @@
     color: #fff;
     padding: 5px 25px;
     border: 1px solid #fff; }
+    .article-proposition .link-article-proposition:focus {
+      outline: none; }
 
 /*# sourceMappingURL=style.css.map */
