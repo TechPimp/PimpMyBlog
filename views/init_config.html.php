@@ -20,7 +20,7 @@
     </label>
     <label class="label-inscription">
         <p class="text-form">Mot de passe de la DB</p>
-        <input class="input-inscription" type="password" name="dbpass" value="" required>
+        <input class="input-inscription" type="password" name="dbpass" value="">
     </label>
     <!-- <hr> -->
     <label class="label-inscription">
