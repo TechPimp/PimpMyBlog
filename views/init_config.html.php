@@ -1,4 +1,4 @@
-<form class="" action="init_config" method="post">
+<form class="" method="post">
   <label>
     <div>Host mySQL</div>
     <input type="text" name="dbhost" value="" required>
