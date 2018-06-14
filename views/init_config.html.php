@@ -30,7 +30,7 @@
       </label>
       <label class="label-inscription">
         <p class="text-form">Mot de passe de la DB</p>
-        <input class="input-inscription" type="password" name="dbpass" value="" required>
+        <input class="input-inscription" type="password" name="dbpass" value="">
       </label>
       <label class="label-inscription">
         <p class="text-form">Choisir un mot de passe d'admin du site</p>
