@@ -42,6 +42,10 @@ class DefaultController {
     }
 
     public function newArticle() {
-        // $this->dbh->query('SELECT title, subtitle from articles');
+        $query = $this->dbh->exec('INSERT INTO `articles` (`id`, `title`, `subtitle`, `content`, `date`, `category`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL);');
+
+        $response = $this->dbh->query('SELECT id FROM `articles` ORDER BY ID DESC LIMIT 1');
+
+        header("location: /articles/{$response->fetch()['id']}");
     }
 }
