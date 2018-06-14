@@ -312,7 +312,7 @@
     justify-content: center;
     cursor: pointer; }
     .circle-menu .link-menu.top-right {
-      background: lightgray;
+      background: white;
       cursor: move; }
     .circle-menu .link-menu .img-link-menu {
       position: absolute;
