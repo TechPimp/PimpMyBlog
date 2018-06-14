@@ -25,7 +25,7 @@ class DefaultController {
         if (!file_exists('./config/credentials.yml')) {
             header('Location: /auth');
         } else {
-            $datas = $this->dbh->query('SELECT title, date, text FROM articles');
+            $datas = $this->dbh->query('SELECT title, date, content FROM articles');
             $response = $datas->fetch();
             render('views/default.html.php', $response);
         }
@@ -38,7 +38,6 @@ class DefaultController {
             render('views/article.html.php', $data);
         } elseif ($_SERVER['REQUEST_METHOD'] === 'PUT') {
             // put the updated article
-
         }
     }
 

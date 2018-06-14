@@ -20,7 +20,7 @@
         </span>
         <hr class="article__divider">
         <p class="article__item" contenteditable="true">
-            <?= $data['text']; ?>
+            <?= $data['content']; ?>
         </p>
     </div>
 </div>
