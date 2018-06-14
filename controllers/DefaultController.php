@@ -33,7 +33,7 @@ class DefaultController {
             }
             var_dump($datas);
 
-            require_once './views/layout.html.php';
+            render('views/default.html.php');
         }
     }
 

@@ -29,4 +29,10 @@ unset($parameters['_route']);
 
 call_user_func_array([new $controller(), $action], $parameters);
 
+function render($path) {
+    require_once('views/head.html.php');
+    require_once($path);
+    require_once('views/foot.html.php');
+}
+
 //var_dump($parameters);
