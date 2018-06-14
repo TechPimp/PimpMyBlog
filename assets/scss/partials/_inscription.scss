@@ -63,7 +63,7 @@
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  max-height: 250px;
+  max-height: 300px;
 
   @include breakpoint($mobile) {
     max-height: 100%;
