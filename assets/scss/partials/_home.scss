@@ -19,20 +19,25 @@
 
     .link-page {
       display: inline-block;
-      text-transform: uppercase;
-      background: $white;
-      color: $black;
-      padding: 20px 25px;
-      cursor: pointer;
 
-      &.active {
+      &.active a {
         background: $black;
         color: $white;
       }
 
-      &:hover {
-        background: $black;
-        color: $white;
+      a {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        background: $white;
+        color: $black;
+        padding: 20px 25px;
+        cursor: pointer;
+
+        &:hover {
+          background: $black;
+          color: $white;
+        }
       }
     }
   }

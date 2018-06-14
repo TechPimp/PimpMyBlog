@@ -12,11 +12,10 @@
 <h1 class="title-page" contenteditable="true">Pimp my blog</h1>
 <nav class="nav-page">
   <ul class="content-link-page">
-    <li class="link-page active">Home</li>
-    <li class="link-page">Page 1</li>
-    <li class="link-page">Page 2</li>
-    <li class="link-page">Page 3</li>
-    <li class="link-page">Page 4</li>
-    <li class="link-page">Page 5</li>
+    <?php foreach ($data['menu'] as $e): ?>
+      <li class="link-page<?= $e['id'] === $data['response']['id'] ? ' active' : null ?>">
+        <a href="/articles/<?= $e['id'] ?>"><?= $e['title'] ?></a>
+      </li>
+    <?php endforeach; ?>
   </ul>
 </nav>

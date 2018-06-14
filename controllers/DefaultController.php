@@ -33,8 +33,10 @@ class DefaultController {
 
     public function getArticleById($id) {
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-            $response = $this->dbh->query("SELECT * from articles WHERE id = {$id}");
-            $data = $response->fetch();
+            $response = $this->dbh->query("SELECT content, date, title, id from articles WHERE id = {$id}");
+            $data = [];
+            $data['menu'] = $this->dbh->query("SELECT title, id from articles")->fetchAll();
+            $data['response'] = $response->fetch();
             render('views/article.html.php', $data);
         } elseif ($_SERVER['REQUEST_METHOD'] === 'PUT') {
             // put the updated article

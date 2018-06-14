@@ -1,14 +1,14 @@
 <div class="container">
     <div class="article">
         <h2 class="article__title" contenteditable="true">
-            <?= $data['title']; ?>
+            <?= $data['response']['title']; ?>
         </h2>
         <span class="article__date" contenteditable="true">
-            <?= $data['date']; ?>
+            <?= $data['response']['date']; ?>
         </span>
         <hr class="article__divider">
         <p class="article__item" contenteditable="true">
-            <?= $data['content']; ?>
+            <?= $data['response']['content']; ?>
         </p>
     </div>
 </div>
