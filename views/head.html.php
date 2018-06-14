@@ -7,3 +7,4 @@
 </head>
 <body>
 
+<?php require_once('views/admin-bar.html.php') ?>

@@ -293,7 +293,7 @@
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  position: relative; }
+  position: absolute; }
 
 .circle-menu {
   width: 150px;
@@ -311,6 +311,9 @@
     display: flex;
     justify-content: center;
     cursor: pointer; }
+    .circle-menu .link-menu.top-right {
+      background: lightgray;
+      cursor: move; }
     .circle-menu .link-menu .img-link-menu {
       position: absolute;
       top: 50%;
@@ -359,6 +362,9 @@
     margin-bottom: 20px; }
     .article__item:focus {
       outline: none; }
+
+body {
+  overflow-x: hidden; }
 
 .container {
   max-width: 878px;
