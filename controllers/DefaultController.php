@@ -38,8 +38,15 @@ class DefaultController {
             $data['menu'] = $this->dbh->query("SELECT title, id from articles")->fetchAll();
             $data['response'] = $response->fetch();
             render('views/article.html.php', $data);
-        } elseif ($_SERVER['REQUEST_METHOD'] === 'PUT') {
-            // put the updated article
+        } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+          $body = json_decode(file_get_contents('php://input'));
+
+          $this->dbh->query("
+            UPDATE `articles` SET `title` = '{$body->title}', `content` = '{$body->content}', date = NOW() WHERE `id` = '{$id}';
+          ");
+
+          header('Content-type: application/json');
+          echo json_encode($body);
         }
     }
 
