@@ -1,4 +1,6 @@
 .git
-config/credentials.yml
-vendor
+/config/credentials.yml
+.idea/
+.DS_Store
 assets/.sass-cache
+/vendor/

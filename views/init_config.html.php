@@ -1,5 +1,5 @@
 <style>
-<?php include 'assets/css/style.css'; ?>
+    <?php include 'assets/css/style.css'; ?>
 </style>
 <div class="singin-wrapper">
 <div class="circle"></div>

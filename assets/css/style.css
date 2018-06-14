@@ -171,4 +171,106 @@
   height: 6%;
   font-size: 18px; }
 
+.title-page {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2% 0; }
+
+.nav-page {
+  text-align: center;
+  -webkit-box-shadow: 4px 3px 37px -10px #303030;
+  -moz-box-shadow: 4px 3px 37px -10px #303030;
+  box-shadow: 4px 3px 37px -10px #303030; }
+  .nav-page .content-link-page {
+    display: block;
+    margin: 0 auto; }
+    .nav-page .content-link-page .link-page {
+      display: inline-block;
+      text-transform: uppercase;
+      background: #fff;
+      color: #000;
+      padding: 20px 25px;
+      cursor: pointer; }
+      .nav-page .content-link-page .link-page.active {
+        background: #000;
+        color: #fff; }
+      .nav-page .content-link-page .link-page:hover {
+        background: #000;
+        color: #fff; }
+
+.content-articles {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  overflow: hidden;
+  padding-top: 5%; }
+  @media (max-width: 1024px) {
+    .content-articles {
+      width: 80%; } }
+
+.block-left {
+  width: 70%;
+  float: left;
+  box-sizing: border-box;
+  padding-right: 6%; }
+  @media (max-width: 1024px) {
+    .block-left {
+      width: 100%;
+      padding-right: 0; } }
+  .block-left .title-article {
+    font-size: 35px; }
+  .block-left .date-article {
+    color: #aaa;
+    padding: 10px 0; }
+  .block-left .line-article {
+    background: #aaa;
+    height: 1px;
+    border: none; }
+  .block-left .text-article {
+    padding: 4% 0; }
+    @media (max-width: 1024px) {
+      .block-left .text-article {
+        padding: 3% 0; } }
+
+.block-right {
+  width: 30%;
+  float: right;
+  box-sizing: border-box; }
+  @media (max-width: 1024px) {
+    .block-right {
+      width: 100%; } }
+
+.title-proposition {
+  font-size: 20px;
+  padding-bottom: 10%; }
+  @media (max-width: 1024px) {
+    .title-proposition {
+      padding-bottom: 4%; } }
+  @media (max-width: 767px) {
+    .title-proposition {
+      padding-top: 4%; } }
+
+.article-proposition {
+  background: #000;
+  color: #fff;
+  padding: 25px 20px;
+  overflow: hidden;
+  margin-bottom: 15%; }
+  @media (max-width: 1024px) {
+    .article-proposition {
+      margin-bottom: 5%; } }
+  .article-proposition .title-article-proposition {
+    text-transform: uppercase;
+    padding-bottom: 10px; }
+  .article-proposition .text-article-proposition {
+    padding-bottom: 20px; }
+  .article-proposition .link-article-proposition {
+    display: block;
+    float: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 5px 25px;
+    border: 1px solid #fff; }
+
 /*# sourceMappingURL=style.css.map */
