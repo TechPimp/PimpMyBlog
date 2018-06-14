@@ -19,5 +19,6 @@ class DefaultController {
 
     public function getArticleById($id) {
         echo "articleId: " . $id;
+       render('views/article.html.php');
     }
 }

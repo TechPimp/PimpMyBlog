@@ -4,3 +4,10 @@
 
 @import "partials/inscription";
 @import "partials/home";
+@import "partials/article";
+
+
+.container {
+  max-width: 878px;
+  margin: 0 auto;
+}
