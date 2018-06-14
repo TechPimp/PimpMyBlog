@@ -12,7 +12,6 @@ $fileLocator = new FileLocator(array(__DIR__."/config"));
 $loader = new YamlFileLoader($fileLocator);
 $routes = $loader->load('routes.yml');
 
-
 $request = Request::createFromGlobals();
 $context = new RequestContext();
 $context->fromRequest($request);

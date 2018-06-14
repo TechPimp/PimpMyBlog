@@ -1,38 +1,90 @@
-.content-text-inscription {
-  width: 60%;
-  display: block;
-  margin: 0 auto;
-  padding-top: 4%;
+.singin-wrapper {
+  padding: 10% 30px 0 30px;
+  margin-bottom: 20px;
+}
 
-  @include breakpoint($tablet) {
-    width: 80%;
+.head-wrapper {
+  position: relative;
+  width: 73%;
+}
+.title, .content-text-inscription {
+  font-weight: bold;
+  font-family: $fjalla_one;
+}
+
+.title {
+  font-size: 50px;
+  position: relative;
+  padding-left: 20px;
+  line-height: 55px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    bottom: 10px;
+    left: 4px;
+    width: 10px;
+    background: $red;
   }
+}
 
+.content-text-inscription {
+  font-size: 19px;
+  margin-top: 20px;
+}
 
-  .text-inscription {
-    font-family: $fjalla_one;
-    font-size: 30px;
+.circle {
+  background: $red;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: -26%;
+  right: -18%;
+  box-shadow: 0 0 10px 5px #EA7878;
 
-    @include breakpoint($tablet) {
-      font-size: 25px;
-    }
-
-    @include breakpoint($mobile) {
-      font-size: 20px;
-    }
+  @include breakpoint($mobile) {
+    width: 300px;
+    height: 300px;
+    top: -19%;
+    right: -27%;
   }
 }
 
 .form-inscription {
-  width: 50%;
-  max-width: 610px;
-  display: block;
-  margin: 0 auto;
-  padding-top: 1%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
 
-  @include breakpoint($tablet) {
-    width: 70%;
+.label-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-height: 300px;
+
+  @include breakpoint($mobile) {
+    max-height: 100%;
   }
+}
+
+.label-inscription {
+  width: 45%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include breakpoint($mobile) {
+    width: 100%;
+  }
+}
+
+.text-form {
+  color: $grey;
+  font-size: 20px !important;
 }
 
 .label-inscription {
@@ -62,22 +114,20 @@
   }
 }
 
-.save-inscription {
-  display: block;
-  margin: 0 auto;
+.save-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 30px;
-  padding: 10px 40px;
-  background: $black;
+}
+
+.save-inscription {
+  width: 100%;
+  max-width: 300px;
+  background: $red;
   color: $white;
   border: none;
-  cursor: pointer;
-  font-size: 22px;
-
-  @include breakpoint($tablet) {
-    font-size: 20px;
-  }
-
-  @include breakpoint($mobile) {
-    font-size: 18px;
-  }
+  border-radius: 4px;
+  height: 6%;
+  font-size: 18px;
 }

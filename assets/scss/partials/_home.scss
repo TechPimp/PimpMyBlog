@@ -2,6 +2,9 @@
   text-transform: uppercase;
   text-align: center;
   padding: 2% 0;
+  &:focus {
+    outline: none;
+  }
 }
 
 .nav-page {
@@ -60,6 +63,9 @@
 
   .title-article {
     font-size: 35px;
+    &:focus {
+      outline: none;
+    }
   }
 
   .date-article {
@@ -75,7 +81,9 @@
 
   .text-article {
     padding: 4% 0;
-
+    &:focus {
+      outline: none;
+    }
     @include breakpoint($tablet) {
       padding: 3% 0;
     }
@@ -95,6 +103,9 @@
 .title-proposition {
   font-size: 20px;
   padding-bottom: 10%;
+  &:focus {
+    outline: none;
+  }
 
   @include breakpoint($tablet) {
     padding-bottom: 4%;
@@ -111,6 +122,9 @@
   padding: 25px 20px;
   overflow: hidden;
   margin-bottom: 15%;
+  &:focus {
+    outline: none;
+  }
 
   @include breakpoint($tablet) {
     margin-bottom: 5%;
@@ -119,10 +133,16 @@
   .title-article-proposition {
     text-transform: uppercase;
     padding-bottom: 10px;
+    &:focus {
+      outline: none;
+    }
   }
 
   .text-article-proposition {
     padding-bottom: 20px;
+    &:focus {
+      outline: none;
+    }
   }
 
   .link-article-proposition {
@@ -133,5 +153,8 @@
     color: $white;
     padding: 5px 25px;
     border: 1px solid $white;
+    &:focus {
+      outline: none;
+    }
   }
 }
