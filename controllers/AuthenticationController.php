@@ -45,4 +45,20 @@ class AuthenticationController {
             require_once('views/init_config.html.php');
         }
     }
+
+    public function login() {
+      if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $credential = Yaml::parseFile('config/credentials.yml');
+
+        if ($credential['mdp'] === $_POST['pwd']) {
+          session_start();
+          $_SESSION['admin'] = true;
+          header('Location: /');
+        } else {
+          header('Location: /login');
+        }
+      } else {
+        require_once('views/login.html.php');
+      }
+    }
 }

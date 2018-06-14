@@ -35,6 +35,7 @@ function render($fileName, $data) {
         throw new \InvalidArgumentException('Fichier de vue '.$fileName.' non trouvé');
     }
 
+    session_start();
     require_once('./views/head.html.php');
     require_once($fileName);
     require_once('./views/foot.html.php');

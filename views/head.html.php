@@ -7,7 +7,9 @@
 </head>
 <body>
 
-<?php require_once('views/admin-bar.html.php') ?>
+<?php if (!empty($_SESSION['admin'])): ?>
+  <?php require_once('views/admin-bar.html.php') ?>
+<?php endif; ?>
 
 <h1 class="title-page">Pimp my blog</h1>
 <nav class="nav-page">

@@ -12,6 +12,9 @@ document.getElementsByClassName('link-menu top-left')[0].addEventListener('click
   })
   .then(function(res){ return res.json() })
   .then(function(data){
+    document.getElementsByClassName('link-page active')[0]
+      .children[0]
+      .innerHTML = data.title
     console.log(data)
   })
 })
