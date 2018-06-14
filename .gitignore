@@ -1,2 +1,4 @@
 .git
-config.json
+config/credentials.yml
+vendor
+assets/.sass-cache
