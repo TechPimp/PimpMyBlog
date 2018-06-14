@@ -1,5 +1,6 @@
 .git
-config.json
-assets/.sass-cache
+/config/credentials.yml
+.idea/
 .DS_Store
-.idea
+assets/.sass-cache
+/vendor/
