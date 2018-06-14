@@ -9,7 +9,7 @@
 
 <?php require_once('views/admin-bar.html.php') ?>
 
-<h1 class="title-page" contenteditable="true">Pimp my blog</h1>
+<h1 class="title-page">Pimp my blog</h1>
 <nav class="nav-page">
   <ul class="content-link-page">
     <?php foreach ($data['menu'] as $e): ?>
