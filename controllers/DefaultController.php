@@ -17,7 +17,7 @@ class DefaultController {
     function __construct() {
       if (file_exists('./config/credentials.yml')) {
         $credential = Yaml::parseFile('config/credentials.yml');
-        $this->dbh = new PDO("mysql:host={$credential['dbhost']};dbname={$credential['dbname']}", $credential["dbuser"], $credential["dbpass"]);
+        $this->dbh = new PDO("mysql:host={$credential['dbhost']};port={$credential['port']};dbname={$credential['dbname']}", $credential["dbuser"], $credential["dbpass"]);
       }
     }
 
@@ -25,13 +25,9 @@ class DefaultController {
         if (!file_exists('./config/credentials.yml')) {
             header('Location: /auth');
         } else {
-            $datas = [];
-            foreach($this->dbh->query('SELECT title, subtitle from articles') as $row) {
-                array_push($datas, $row);
-            }
-            var_dump($datas);
-
-            render('views/default.html.php');
+            $datas = $this->dbh->query('SELECT title, date, text FROM articles');
+            $response = $datas->fetch();
+            render('views/default.html.php', $response);
         }
     }
 
@@ -41,7 +37,7 @@ class DefaultController {
             $data = $response->fetch();
             render('views/article.html.php', $data);
         } elseif ($_SERVER['REQUEST_METHOD'] === 'PUT') {
-            //
+            // put the updated article
 
         }
     }

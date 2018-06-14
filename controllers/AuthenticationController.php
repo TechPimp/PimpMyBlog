@@ -19,7 +19,7 @@ class AuthenticationController {
             file_put_contents('./config/credentials.yml', $yaml);
 
             $credential = Yaml::parseFile('config/credentials.yml');
-            $dbh = new PDO("mysql:host={$credential['dbhost']};dbname={$credential['dbname']}", $credential["dbuser"], $credential["dbpass"]);
+            $dbh = new PDO("mysql:host={$credential['dbhost']};port={$credential['port']};dbname={$credential['dbname']}", $credential["dbuser"], $credential["dbpass"]);
 
             try {
                  $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );//Error Handling
