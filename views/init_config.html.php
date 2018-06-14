@@ -10,7 +10,7 @@
       <p class="text-inscription">Veuillez remplir les informations ci-dessous.</p>
     </div>
   </div>
-  <form class="form-inscription" action="init_config" method="post">
+  <form class="form-inscription" action="/auth" method="post">
     <div class="label-wrapper">
       <label class="label-inscription">
         <p class="text-form">Host mySQL</p>
@@ -18,7 +18,7 @@
       </label>
       <label class="label-inscription">
         <p class="text-form">Port de la BDD</p>
-        <input class="input-inscription" type="text" name="" value="" required>
+        <input class="input-inscription" type="text" name="port" value="" required>
       </label>
       <label class="label-inscription">
         <p class="text-form">Nom de la DB</p>
