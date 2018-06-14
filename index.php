@@ -29,10 +29,16 @@ unset($parameters['_route']);
 
 call_user_func_array([new $controller(), $action], $parameters);
 
-function render($path) {
-    require_once('views/head.html.php');
-    require_once($path);
-    require_once('views/foot.html.php');
+function render($fileName, $data) {
+    if (!file_exists( $fileName)) {
+        // le chemin de la vue ne correspond pas à un fichier existant
+        throw new \InvalidArgumentException('Fichier de vue '.$fileName.' non trouvé');
+    }
+
+    require_once('./views/head.html.php');
+    require_once($fileName);
+    require_once('./views/foot.html.php');
+    return $data;
 }
 
 //var_dump($parameters);

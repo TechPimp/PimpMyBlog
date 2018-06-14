@@ -1,0 +1,28 @@
+.article {
+  margin-top: 90px;
+  &__title {
+    font-size: 60px;
+    font-weight: bold;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__date {
+    font-size: 20px;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__divider {
+    color: #C2C2C2;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  &__item {
+    font-size: 20px;
+    margin-bottom: 20px;
+    &:focus {
+      outline: none;
+    }
+  }
+}

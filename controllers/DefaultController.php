@@ -10,7 +10,6 @@ namespace CMS\Controllers;
 
 use Symfony\Component\Yaml\Yaml;
 use PDO;
-
 class DefaultController {
 
     private $dbh;
@@ -26,7 +25,6 @@ class DefaultController {
         if (!file_exists('./config/credentials.yml')) {
             header('Location: /auth');
         } else {
-
             $datas = [];
             foreach($this->dbh->query('SELECT title, subtitle from articles') as $row) {
                 array_push($datas, $row);
@@ -38,7 +36,14 @@ class DefaultController {
     }
 
     public function getArticleById($id) {
-        echo "articleId: " . $id;
+        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+            $response = $this->dbh->query("SELECT * from articles WHERE id = {$id}");
+            $data = $response->fetch();
+            render('views/article.html.php', $data);
+        } elseif ($_SERVER['REQUEST_METHOD'] === 'PUT') {
+            //
+
+        }
     }
 
     public function newArticle() {
