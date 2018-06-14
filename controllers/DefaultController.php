@@ -16,8 +16,10 @@ class DefaultController {
     private $dbh;
 
     function __construct() {
+      if (file_exists('./config/credentials.yml')) {
         $credential = Yaml::parseFile('config/credentials.yml');
         $this->dbh = new PDO("mysql:host={$credential['dbhost']};dbname={$credential['dbname']}", $credential["dbuser"], $credential["dbpass"]);
+      }
     }
 
     public function helloAction() {
