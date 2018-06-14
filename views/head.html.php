@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<?php if (!empty($_SESSION['admin'])): ?>
+<?php if (!empty($_SESSION['admin']) && $_SESSION['admin']): ?>
   <?php require_once('views/admin-bar.html.php') ?>
 <?php endif; ?>
 

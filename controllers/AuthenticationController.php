@@ -61,4 +61,10 @@ class AuthenticationController {
         require_once('views/login.html.php');
       }
     }
+
+    public function logout() {
+      session_start();
+      $_SESSION['admin'] = false;
+      header('Location: /');
+    }
 }

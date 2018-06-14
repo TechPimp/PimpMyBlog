@@ -6,6 +6,10 @@ login:
   path: /login
   defaults: { _controller: 'CMS\Controllers\AuthenticationController::login'}
 
+logout:
+  path: /logout
+  defaults: { _controller: 'CMS\Controllers\AuthenticationController::logout'}
+
 blog_list:
     path:     /
     defaults: { _controller: 'CMS\Controllers\DefaultController::helloAction' }
