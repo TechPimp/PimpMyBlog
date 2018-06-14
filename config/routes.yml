@@ -13,3 +13,7 @@ article:
 new_article:
     path:     /new_article
     defaults: { _controller: 'CMS\Controllers\DefaultController::newArticle' }
+
+delete_article:
+    path:     /delete_article/{id}
+    defaults: { _controller: 'CMS\Controllers\DefaultController::deleteArticle' }

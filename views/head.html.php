@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Pimp my blog - <?= $data['response']['title'] ?></title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>

@@ -10,6 +10,7 @@ namespace CMS\Controllers;
 
 use Symfony\Component\Yaml\Yaml;
 use PDO;
+
 class DefaultController {
 
     private $dbh;
@@ -51,5 +52,11 @@ class DefaultController {
         $response = $this->dbh->query('SELECT id FROM `articles` ORDER BY ID DESC LIMIT 1');
 
         header("location: /articles/{$response->fetch()['id']}");
+    }
+
+    public function deleteArticle($id) {
+      $this->dbh->query("DELETE FROM `articles` WHERE `id` = {$id};");
+
+      header("location: /");
     }
 }

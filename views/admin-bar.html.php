@@ -4,7 +4,7 @@
       <img class="img-link-menu" src="../assets/images/download-button.png" alt="">
     </a>
     <div class="link-menu top-right" id='admin-menu-header'></div>
-    <a href="#" class="link-menu bottom-left">
+    <a href="/delete_article/<?= $data['response']['id'] ?>" class="link-menu bottom-left">
       <img class="img-link-menu" src="../assets/images/rubbish-bin.png" alt="">
     </a>
     <a href="/new_article" class="link-menu">
