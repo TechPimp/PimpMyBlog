@@ -17,6 +17,10 @@
         <input class="input-inscription" type="text" name="dbhost" value="" required>
       </label>
       <label class="label-inscription">
+        <p class="text-form">Port de la BDD</p>
+        <input class="input-inscription" type="text" name="" value="" required>
+      </label>
+      <label class="label-inscription">
         <p class="text-form">Nom de la DB</p>
         <input class="input-inscription" type="text" name="dbname" value="" required>
       </label>
