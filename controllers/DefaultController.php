@@ -42,7 +42,10 @@ class DefaultController {
     }
 
     public function newArticle() {
-        $query = $this->dbh->exec('INSERT INTO `articles` (`id`, `title`, `subtitle`, `content`, `date`, `category`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL);');
+        $query = $this->dbh->exec("
+          INSERT INTO `articles` (`title`, `subtitle`, `content`, `date`, `category`) 
+          VALUES ('Titre de l’article', 'Sous-titre de l‘article', 'Contenu de l‘article', NULL, NULL);
+        ");
 
         $response = $this->dbh->query('SELECT id FROM `articles` ORDER BY ID DESC LIMIT 1');
 
