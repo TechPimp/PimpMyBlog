@@ -25,9 +25,8 @@ class DefaultController {
         if (!file_exists('./config/credentials.yml')) {
             header('Location: /auth');
         } else {
-            $datas = $this->dbh->query('SELECT title, date, content FROM articles');
-            $response = $datas->fetch();
-            render('views/default.html.php', $response);
+          $response = $this->dbh->query('SELECT id FROM `articles` ORDER BY ID LIMIT 1');
+          header("location: /articles/{$response->fetch()['id']}");
         }
     }
 
