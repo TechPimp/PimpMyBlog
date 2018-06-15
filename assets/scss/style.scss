@@ -1,0 +1,17 @@
+@import "partials/variables";
+@import "partials/reset";
+@import "partials/mixin";
+
+@import "partials/inscription";
+@import "partials/home";
+@import "partials/navigation";
+@import "partials/article";
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 878px;
+  margin: 0 auto;
+}
