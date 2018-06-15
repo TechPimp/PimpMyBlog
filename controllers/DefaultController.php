@@ -62,7 +62,13 @@ class DefaultController {
     }
 
     public function deleteArticle($id) {
-      $this->dbh->query("DELETE FROM `articles` WHERE `id` = {$id};");
+      $count = $this->dbh->query("
+        SELECT count(id) FROM articles
+      ");
+
+      if ($count->fetch()[0] > 1) {
+        $this->dbh->query("DELETE FROM `articles` WHERE `id` = {$id};");
+      }
 
       header("location: /");
     }

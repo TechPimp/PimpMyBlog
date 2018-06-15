@@ -33,6 +33,9 @@ class AuthenticationController {
                      `category` varchar(100) DEFAULT NULL,
                      PRIMARY KEY (`id`)
                    ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+                   INSERT INTO `articles` (`id`, `title`, `subtitle`, `content`, `date`, `category`) VALUES (NULL, 'Mon premier article', NULL, 'Ceci est votre premier article !', NOW(), NULL);
+
                  ");
                  print("Created Table.\n");
 
