@@ -33,6 +33,9 @@ class AuthenticationController {
                      `category` varchar(100) DEFAULT NULL,
                      PRIMARY KEY (`id`)
                    ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+                   INSERT INTO `articles` (`id`, `title`, `subtitle`, `content`, `date`, `category`) VALUES (NULL, 'Mon premier article', NULL, 'Ceci est votre premier article !', NOW(), NULL);
+
                  ");
                  print("Created Table.\n");
 
@@ -44,5 +47,27 @@ class AuthenticationController {
         } else {
             require_once('views/init_config.html.php');
         }
+    }
+
+    public function login() {
+      if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $credential = Yaml::parseFile('config/credentials.yml');
+
+        if ($credential['mdp'] === $_POST['pwd']) {
+          session_start();
+          $_SESSION['admin'] = true;
+          header('Location: /');
+        } else {
+          header('Location: /login');
+        }
+      } else {
+        require_once('views/login.html.php');
+      }
+    }
+
+    public function logout() {
+      session_start();
+      $_SESSION['admin'] = false;
+      header('Location: /');
     }
 }
